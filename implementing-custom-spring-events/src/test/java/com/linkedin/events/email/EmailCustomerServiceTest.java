@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.test.annotation.DirtiesContext;
 
 import static org.mockito.BDDMockito.then;
@@ -25,9 +26,11 @@ class EmailCustomerServiceTest
     @SpyBean
     private EmailService emailService;
 
+    @Autowired
+    private ApplicationEventPublisher applicationEventPublisher;
+
     @Test
     void registerCustomer_forNewCustomer_sendsAnEmail(){
-
         //given
         Customer customer = new Customer("john@email.com");
 
@@ -51,7 +54,4 @@ class EmailCustomerServiceTest
         //then
         then(emailService).should(times(1)).sendCustomerRemovedEmail(customer);
     }
-
-
-
 }
