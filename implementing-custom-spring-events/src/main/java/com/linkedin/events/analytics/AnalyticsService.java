@@ -4,11 +4,12 @@ import com.linkedin.events.customer.Customer;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import static java.lang.Thread.sleep;
 
 @Slf4j
-@Component
+@Service
 public class AnalyticsService {
 
     @SneakyThrows

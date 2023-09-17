@@ -21,8 +21,7 @@ import static org.mockito.Mockito.times;
 
 @SpringBootTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class PromotionServiceTest
-{
+class PromotionServiceTest {
 
     @Autowired
     private CustomerRepository customerRepository;

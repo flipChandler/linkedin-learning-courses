@@ -16,6 +16,7 @@ public class EmailService {
     public void sendCustomerRemovedEmail(Customer customer) {
         log.info("Sending removed email for customer {}", customer);
     }
+
     public void sendOrderEmail(Order order) {
         log.info("Sending email for order {}", order);
     }
