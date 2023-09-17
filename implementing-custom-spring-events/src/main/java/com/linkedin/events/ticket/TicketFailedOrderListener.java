@@ -17,5 +17,5 @@ public class TicketFailedOrderListener {
         ticketService.createTicket(event.getOrder());
     }
 
-    // course Software Architectur: DDD with Allen Holub
+    // course Software Architecture: DDD with Allen Holub
 }
